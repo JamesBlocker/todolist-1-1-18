@@ -21,7 +21,11 @@ $($inputCheck).on('click', strikeThrough);
 
 function strikeThrough() {
     var spanTarget = $(this).siblings("span");
+    if (spanTarget.css("text-decoration") === "line-through solid rgb(71, 62, 57)") {
+        spanTarget.css("text-decoration", "none solid rgb(71, 62, 57)");    
+    } else {
     spanTarget.css("text-decoration", "line-through");
+}
 
 };
 
