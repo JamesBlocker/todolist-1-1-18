@@ -33,8 +33,12 @@ var $star = $('.glyphicon-star');
 $star.on('click', activate);
 
 function activate() {
-    $(this).addClass('active');
-    console.log(this)
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+    } else {
+        $(this).addClass('active');
+        console.log(this)
+    }
 }
 
 	
