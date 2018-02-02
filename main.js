@@ -25,8 +25,17 @@ function strikeThrough() {
         spanTarget.css("text-decoration", "none solid rgb(71, 62, 57)");    
     } else {
     spanTarget.css("text-decoration", "line-through");
-}
-
+    }
 };
 
 
+var $star = $('.glyphicon-star');
+$star.on('click', activate);
+
+function activate() {
+    $(this).addClass('active');
+    console.log(this)
+}
+
+	
+// $( "p" ).addClass( "myClass yourClass" );
